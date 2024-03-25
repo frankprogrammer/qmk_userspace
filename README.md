@@ -1,58 +1,64 @@
-# QMK Userspace
+# <font color="#A6E22E">Unicorne</font>
 
-This is a template repository which allows for an external set of QMK keymaps to be defined and compiled. This is useful for users who want to maintain their own keymaps without having to fork the main QMK repository.
+I use this layout for my Unicorne LP by https://boardsource.xyz
 
-## Howto configure your build targets
+<img src="unicorneLayout-Graphite.png" alt="graphite layout" width="600"/>
 
-1. Run the normal `qmk setup` procedure if you haven't already done so -- see [QMK Docs](https://docs.qmk.fm/#/newbs) for details.
-1. Fork this repository
-1. Clone your fork to your local machine
-1. Add a new keymap for your board using `qmk new-keymap`
-    * This will create a new keymap in the `keyboards` directory, in the same location that would normally be used in the main QMK repository. For example, if you wanted to add a keymap for the Planck, it will be created in `keyboards/planck/keymaps/<your keymap name>`
-    * You can also create a new keymap using `qmk new-keymap -kb <your_keyboard> -km <your_keymap>`
-    * Alternatively, add your keymap manually by placing it in the location specified above.
-    * `layouts/<layout name>/<your keymap name>/keymap.*` is also supported if you prefer the layout system
-1. Add your keymap(s) to the build by running `qmk userspace-add -kb <your_keyboard> -km <your_keymap>`
-    * This will automatically update your `qmk.json` file
-    * Corresponding `qmk userspace-remove -kb <your_keyboard> -km <your_keymap>` will delete it
-    * Listing the build targets can be done with with `qmk userspace-list`
-1. Commit your changes
+*Image generated with keyfab (https://github.com/jaroslaw-weber/keyfab). Edit code and run locally for best results.*
 
-## Howto build with GitHub
+# <font color="#6796e6">0: Graphite Lower</font>
 
-1. In the GitHub Actions tab, enable workflows
-1. Push your changes above to your forked GitHub repository
-1. Look at the GitHub Actions for a new actions run
-1. Wait for the actions run to complete
-1. Inspect the Releases tab on your repository for the latest firmware build
+I use the Graphite keyboard layout https://github.com/rdavison/graphite-layout. The main homerow keys are NRTS and HAEI, so all layers are focused around these positions. I originally used Colemak DH, which was a massive improvement over QWERTY, but still had some awkward combinations.
 
-## Howto build locally
+<font color="#A6E22E">**Ctrl Z**</font> gives me quick access to Undo and Redo is mapped to the same key one layer up.
 
-1. Run the normal `qmk setup` procedure if you haven't already done so -- see [QMK Docs](https://docs.qmk.fm/#/newbs) for details.
-1. Fork this repository
-1. Clone your fork to your local machine
-1. `cd` into this repository's clone directory
-1. Set global userspace path: `qmk config user.overlay_dir="$(realpath .)"` -- you MUST be located in the cloned userspace location for this to work correctly
-    * This will be automatically detected if you've `cd`ed into your userspace repository, but the above makes your userspace available regardless of your shell location.
-1. Compile normally: `qmk compile -kb your_keyboard -km your_keymap` or `make your_keyboard:your_keymap`
+The <font color="#FD971F">**MO(1)**</font> and <font color="#FD971F">**MO(2)**</font> keys will change layers to Navigation or Code while held individually.
 
-Alternatively, if you configured your build targets above, you can use `qmk userspace-compile` to build all of your userspace targets at once.
+# <font color="#F44747">1: Navigation / Numpad</font>
 
-## Extra info
+When using a split keyboard, it is important that all of the navigation keys are on the side opposite the mouse. This allows me to click code with my right hand and navigate it with my left at the same time. 
 
-If you wish to point GitHub actions to a different repository, a different branch, or even a different keymap name, you can modify `.github/workflows/build_binaries.yml` to suit your needs.
+<font color="#A6E22E">**Ctrl-Shift-F**</font> is used to bring up the Search In All Files bar in VS Code.
 
-To override the `build` job, you can change the following parameters to use a different QMK repository or branch:
-```
-    with:
-      qmk_repo: qmk/qmk_firmware
-      qmk_ref: master
-```
+<font color="#A6E22E">**Shift-Home**</font> is used to select text from the current cursor position to the start of the line.
 
-If you wish to manually manage `qmk_firmware` using git within the userspace repository, you can add `qmk_firmware` as a submodule in the userspace directory instead. GitHub Actions will automatically use the submodule at the pinned revision if it exists, otherwise it will use the default latest revision of `qmk_firmware` from the main repository.
+<font color="#A6E22E">**Win-E**</font> opens a Windows File Explorer window.
 
-This can also be used to control which fork is used, though only upstream `qmk_firmware` will have support for external userspace until other manufacturers update their forks.
+I added an <font color="#A6E22E">**Enter**</font> key since I want to be able to use it while navigating with the mouse.
 
-1. (First time only) `git submodule add https://github.com/qmk/qmk_firmware.git`
-1. (To update) `git submodule update --init --recursive`
-1. Commit your changes to your userspace repository
+<font color="#A6E22E">**Delete**</font> is in an awkward position while holding the left layer button, but I rarely use it.
+
+<font color="#A6E22E">**Ctrl Y**</font> gives me quick access to Redo and Undo is mapped to the same key one layer down.
+
+Pressing the <font color="#FD971F">**OSL(3)**</font> thumb key on the right (at this point I am still holding the left layer key) will toggle the Uppercase layer. I can let go of both thumb keys and type a single uppercase letter or hold both to continue typing in uppercase.
+
+# <font color="#b267e6">2: Code / Symbols</font>
+
+The 8 symbols on the homerow locations are my most used coding symbols
+
+<font color="#FD971F">**Calc**</font> opens the Windows Calculator. The Media keys let me control music in Spotify.
+
+Pressing the <font color="#FD971F">**OSL(3)**</font> thumb key on the left (at this point I am still holding the right layer key) will toggle the Uppercase layer. I can let go of both thumb keys and type a single uppercase letter or hold both to continue typing in uppercase.
+
+# <font color="#F92672">3: Graphite Upper</font>
+
+Keeping the uppercase letters on a separate layer triggered by the thumbs allows me to touch type as normal since the Shift key is on the side and would normally throw things off.
+
+An alternative approach would be to swap Ctrl and Shift so I can write uppercase while holding Shift. The downside of this is that you have to stretch to capitalize letters like B, while the OSL key allows me toggle the caps layer, lift my thumbs, and then type a little more comfortably.
+
+I use the top-right key to trigger another layer that I use to control my keyboard's RGB.
+
+# <font color="#A6E22E">4: RGB Controls</font>
+
+## Resources
+[What makes a keyboard layout good?](https://semilin.github.io/blog/2023/layout_quality.html)
+
+[Keyboard layout family tree](https://www.reddit.com/r/KeyboardLayouts/comments/11g3xlx/keyboard_layout_family_tree/)
+
+[Oxey's Layouts](https://oxey.dev/index.html)
+
+[The QMK Tutorial](https://docs.qmk.fm/#/newbs)
+
+[MonkeyType](https://monkeytype.com/)
+
+[SpeedTyper.dev](https://speedtyper.dev/)
