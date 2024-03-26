@@ -1,0 +1,22 @@
+{
+    "keyboard": "boardsource/unicorne",
+    "keymap": "frankprogrammer",
+    "layout": "LAYOUT_split_3x6_3",
+    "layers": [
+                [
+                        "KC_TAB", "KC_B", "KC_L", "KC_D", "KC_W", "KC_Z", "S(KC_1)", "KC_F", "KC_O", "KC_U", "KC_J", "C(KC_Z)", "KC_LSFT", "KC_N", "KC_R", "KC_T", "KC_S", "KC_G", "KC_Y", "KC_H", "KC_A", "KC_E", "KC_I", "KC_LALT", "KC_LGUI", "KC_Q", "KC_X", "KC_M", "KC_C", "KC_V", "KC_K", "KC_P", "KC_COMM", "KC_DOT", "S(KC_SLSH)", "KC_ESC", "KC_LCTL", "MO(1)", "KC_BSPC", "KC_SPC", "MO(2)", "KC_ENT"
+                ],
+                [
+                        "KC_ESC", "KC_F2", "KC_F5", "KC_F11", "KC_F12", "C(S(KC_F))", "KC_PPLS", "KC_7", "KC_8", "KC_9", "KC_PAST", "C(KC_Y)", "KC_LSFT", "KC_LEFT", "KC_DOWN", "KC_UP", "KC_RGHT", "S(KC_HOME)", "KC_EQL", "KC_4", "KC_5", "KC_6", "KC_0", "KC_LALT", "G(KC_E)", "KC_HOME", "KC_PGDN", "KC_PGUP", "KC_END", "KC_ENT", "KC_PMNS", "KC_1", "KC_2", "KC_3", "KC_SLSH", "KC_ESC", "KC_LCTL", "KC_NO", "KC_DEL", "KC_SPC", "OSL(3)", "KC_ENT"
+                ],
+                [
+                        "KC_TAB", "KC_NO", "S(KC_3)", "S(KC_COMM)", "S(KC_DOT)", "KC_GRV", "S(KC_1)", "S(KC_2)", "S(KC_4)", "S(KC_MINS)", "S(KC_GRV)", "KC_PSCR", "KC_LSFT", "S(KC_9)", "S(KC_0)", "S(KC_LBRC)", "S(KC_RBRC)", "S(KC_7)", "S(KC_6)", "S(KC_QUOT)", "KC_QUOT", "S(KC_SCLN)", "KC_SCLN", "KC_LALT", "KC_LGUI", "KC_NO", "S(KC_5)", "KC_LBRC", "KC_RBRC", "S(KC_BSLS)", "KC_CALC", "KC_MPLY", "KC_MNXT", "KC_MPRV", "KC_BSLS", "KC_ESC", "KC_LCTL", "OSL(3)", "C(KC_BSPC)", "KC_SPC", "KC_NO", "KC_ENT"
+                ],
+                [
+                        "KC_TAB", "S(KC_B)", "S(KC_L)", "S(KC_D)", "S(KC_W)", "S(KC_Z)", "S(KC_1)", "S(KC_F)", "S(KC_O)", "S(KC_U)", "S(KC_J)", "MO(4)", "KC_LSFT", "S(KC_N)", "S(KC_R)", "S(KC_T)", "S(KC_S)", "S(KC_G)", "S(KC_Y)", "S(KC_H)", "S(KC_A)", "S(KC_E)", "S(KC_I)", "KC_LALT", "KC_LGUI", "S(KC_Q)", "S(KC_X)", "S(KC_M)", "S(KC_C)", "S(KC_V)", "S(KC_K)", "S(KC_P)", "KC_COMM", "KC_DOT", "S(KC_SLSH)", "KC_ESC", "KC_LCTL", "KC_NO", "KC_BSPC", "KC_SPC", "KC_NO", "KC_ENT"
+                ],
+                [
+                        "KC_NO", "KC_NO", "KC_NO", "KC_NO", "KC_NO", "KC_NO", "KC_NO", "KC_NO", "KC_NO", "KC_NO", "KC_NO", "KC_NO", "KC_NO", "KC_NO", "KC_NO", "KC_NO", "KC_NO", "KC_NO", "RGB_SPI", "RGB_VAI", "RGB_SAI", "RGB_HUI", "RGB_MOD", "KC_NO", "G(KC_PAUS)", "KC_NO", "KC_NO", "KC_NO", "KC_NO", "KC_NO", "RGB_SPD", "RGB_VAD", "RGB_SAD", "RGB_HUD", "RGB_RMOD", "KC_NO", "KC_NO", "KC_NO", "KC_NO", "KC_NO", "KC_NO", "KC_NO"
+                ]
+    ]
+}

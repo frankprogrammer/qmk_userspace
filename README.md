@@ -1,6 +1,6 @@
 # <font color="#A6E22E">Unicorne</font>
 
-I use this layout for my Unicorne LP by https://boardsource.xyz
+I use this layout for my [Unicorne LP by Boardsource](https://www.boardsource.xyz/products/unicorne-LP)
 
 <img src="unicorneLayout-Graphite.png" alt="graphite layout" width="600"/>
 
@@ -8,7 +8,7 @@ I use this layout for my Unicorne LP by https://boardsource.xyz
 
 # <font color="#6796e6">0: Graphite Lower</font>
 
-I use the Graphite keyboard layout https://github.com/rdavison/graphite-layout. The main homerow keys are NRTS and HAEI, so all layers are focused around these positions. I originally used Colemak DH, which was a massive improvement over QWERTY, but still had some awkward combinations.
+I use the [Graphite keyboard layout](https://github.com/rdavison/graphite-layout). The main homerow keys are NRTS and HAEI, so all layers are focused around these positions. I originally used Colemak DH, which was a massive improvement over QWERTY, but still had some awkward combinations.
 
 <font color="#A6E22E">**Ctrl Z**</font> gives me quick access to Undo and Redo is mapped to the same key one layer up.
 
@@ -49,6 +49,45 @@ An alternative approach would be to swap Ctrl and Shift so I can write uppercase
 I use the top-right key to trigger another layer that I use to control my keyboard's RGB.
 
 # <font color="#A6E22E">4: RGB Controls</font>
+
+# <font color="#6796e6">Build Firmware with QMK</font>
+
+I use the [QMK Userspace](https://docs.qmk.fm/#/newbs_external_userspace) system to build my QMK firmware. This allows me to keep my custom layout separate from QMK.
+
+Install [QMK SYS](https://github.com/qmk/qmk_distro_msys/releases/latest)
+
+Run QMK SYS
+
+This will download the firmware to the specified path<br>
+`qmk setup -H F:/Projects/Frank/Keyboard/qmk_firmware`
+
+Clone or download my custom userspace. In my case, I keep it at `F:/Projects/Frank/Keyboard/qmk_userspace`<br>
+`git clone https://github.com/frankprogrammer/qmk_userspace.git`
+
+`cd qmk_userspace`
+
+Enable the QMK Userspace system and point it to the folder we are in.<br>
+`qmk config user.overlay_dir="$(realpath .)"`
+
+This generates boardsource_unicorne_frankprogrammer.uf2<br>
+`qmk compile -kb boardsource/unicorne -km frankprogrammer`
+
+(Optional) This adds the keymap folder to qmk.json. Use this if you want `qmk compile` to find your own keymap folder<br>
+`qmk new-keymap -kb boardsource/unicorne -km my_keymap_folder`
+
+# <font color="#F44747">Install Firmware</font>
+Unplug the Unicorne from the PC. On the left half, hold the top-left key and connect the USB-C cable from the PC. A folder should pop open. Drag the uf2 file to this folder. The Unicorne should reboot. 
+
+Repeat this process, but plug into the right half while holding the top-right key of the right half. 
+
+Plug the cable back to the left half afterwards. 
+
+# <font color="#b267e6">VIA</font>
+This firmware has VIA enabled. It allows you to update your keymap without having to recompile and flash every time. You can use VIA at https://usevia.app/. 
+
+VIA has an option to save your layout, but it is in a custom format. You can convert it to the QMK keymap.json format with:<br>
+`qmk -v via2json -kb "boardsource/unicorne" -l "LAYOUT_split_3x6_3" -km frankprogrammer -o keymap.json keymap-via.json`
+
 
 ## Resources
 [What makes a keyboard layout good?](https://semilin.github.io/blog/2023/layout_quality.html)
