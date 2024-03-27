@@ -1,6 +1,5 @@
 {
     "userspace_version": "1.0",
     "build_targets": [
-        ["boardsource/unicorne", "frankprogrammer"]
     ]
 }

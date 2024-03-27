@@ -52,7 +52,7 @@ I use the top-right key to trigger another layer that I use to control my keyboa
 
 # <font color="#6796e6">Build Firmware with QMK</font>
 
-I use the [QMK Userspace](https://docs.qmk.fm/#/newbs_external_userspace) system to build my QMK firmware. This allows me to keep my custom layout separate from QMK.
+I use the [QMK Userspace](https://docs.qmk.fm/#/newbs_external_userspace) system to build my QMK firmware. This allows me to keep my custom keymap separate from the qmk_firmware repository.
 
 Install [QMK SYS](https://github.com/qmk/qmk_distro_msys/releases/latest)
 
@@ -61,19 +61,16 @@ Run QMK SYS
 This will download the firmware to the specified path<br>
 `qmk setup -H F:/Projects/Frank/Keyboard/qmk_firmware`
 
-Clone or download my custom userspace. In my case, I keep it at `F:/Projects/Frank/Keyboard/qmk_userspace`<br>
+Clone or download my custom userspace. It is just a fork of the template. In my case, I keep it at `F:/Projects/Frank/Keyboard/qmk_userspace`<br>
 `git clone https://github.com/frankprogrammer/qmk_userspace.git`
 
 `cd qmk_userspace`
 
-Enable the QMK Userspace system and point it to the folder we are in.<br>
+Enable the QMK Userspace system and points it to the folder we are in. This overlays the qmk_userspace folder on top of the qmk_firmware folder<br>
 `qmk config user.overlay_dir="$(realpath .)"`
 
 This generates boardsource_unicorne_frankprogrammer.uf2<br>
 `qmk compile -kb boardsource/unicorne -km frankprogrammer`
-
-(Optional) This adds the keymap folder to qmk.json. Use this if you want `qmk compile` to find your own keymap folder<br>
-`qmk new-keymap -kb boardsource/unicorne -km my_keymap_folder`
 
 # <font color="#F44747">Install Firmware</font>
 Unplug the Unicorne from the PC. On the left half, hold the top-left key and connect the USB-C cable from the PC. A folder should pop open. Drag the uf2 file to this folder. The Unicorne should reboot. 
@@ -87,7 +84,6 @@ This firmware has VIA enabled. It allows you to update your keymap without havin
 
 VIA has an option to save your layout, but it is in a custom format. You can convert it to the QMK keymap.json format with:<br>
 `qmk -v via2json -kb "boardsource/unicorne" -l "LAYOUT_split_3x6_3" -km frankprogrammer -o keymap.json keymap-via.json`
-
 
 ## Resources
 [What makes a keyboard layout good?](https://semilin.github.io/blog/2023/layout_quality.html)
