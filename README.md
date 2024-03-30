@@ -58,10 +58,10 @@ Install [QMK SYS](https://github.com/qmk/qmk_distro_msys/releases/latest)
 
 Run QMK SYS
 
-This will download the firmware to the specified path<br>
+This will download the latest qmk_firmware repository to the specified path<br>
 `qmk setup -H F:/Projects/Frank/Keyboard/qmk_firmware`
 
-Clone or download my custom userspace. It is just a fork of the template. In my case, I keep it at `F:/Projects/Frank/Keyboard/qmk_userspace`<br>
+Clone or download my custom userspace. It is just a fork of the [template](https://github.com/qmk/qmk_userspace). In my case, I keep it at `F:/Projects/Frank/Keyboard/qmk_userspace`<br>
 `git clone https://github.com/frankprogrammer/qmk_userspace.git`
 
 `cd qmk_userspace`
