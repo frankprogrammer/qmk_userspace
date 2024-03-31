@@ -20,7 +20,7 @@ When using a split keyboard, it is important that all of the navigation keys are
 
 <font color="#A6E22E">**Ctrl-Shift-F**</font> is used to bring up the Search In All Files bar in VS Code.
 
-<font color="#A6E22E">**Shift-Home**</font> is used to select text from the current cursor position to the start of the line.
+<font color="#A6E22E">**Ctrl-F**</font> is used for a faster find with my left hand.
 
 <font color="#A6E22E">**Win-E**</font> opens a Windows File Explorer window.
 
