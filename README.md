@@ -1,6 +1,6 @@
 # <font color="#A6E22E">Unicorne</font>
 
-I use this layout for my [Unicorne LP by Boardsource](https://www.boardsource.xyz/products/unicorne-LP)
+I use this layout for my [Unicorne LP by Boardsource](https://www.boardsource.xyz/products/unicorne-LP). A keymap is very personal, so do not expect to find the "best" layout. Try to optimize your layout to what you use most and update it frequently with VIA. Hopefully, my keymap can give you some good ideas.
 
 <img src="unicorneLayout-Graphite.png" alt="graphite layout" width="600"/>
 
@@ -86,14 +86,38 @@ VIA has an option to save your layout, but it is in a custom format. You can con
 `qmk -v via2json -kb "boardsource/unicorne" -l "LAYOUT_split_3x6_3" -km frankprogrammer -o keymap.json keymap-via.json`
 
 ## Resources
-[What makes a keyboard layout good?](https://semilin.github.io/blog/2023/layout_quality.html)
+- [What makes a keyboard layout good?](https://semilin.github.io/blog/2023/layout_quality.html)
 
-[Keyboard layout family tree](https://www.reddit.com/r/KeyboardLayouts/comments/11g3xlx/keyboard_layout_family_tree/)
+- [Keyboard layout family tree](https://www.reddit.com/r/KeyboardLayouts/comments/11g3xlx/keyboard_layout_family_tree/)
 
-[Oxey's Layouts](https://oxey.dev/index.html)
+- [Oxey's Layouts](https://oxey.dev/index.html)
 
-[The QMK Tutorial](https://docs.qmk.fm/#/newbs)
+- [The QMK Tutorial](https://docs.qmk.fm/#/newbs)
 
-[MonkeyType](https://monkeytype.com/)
+- [MonkeyType](https://monkeytype.com/)
 
-[SpeedTyper.dev](https://speedtyper.dev/)
+- [SpeedTyper.dev](https://speedtyper.dev/)
+
+
+## Hardware 
+Main
+- [Unicorne LP by boardsource.xyz](https://www.boardsource.xyz/products/unicorne-LP)
+- [Choc V1 Pink switches](https://www.amazon.com/gp/product/B0BLCR8KSN)
+- [wrk. Pure keycaps](https://worklouder.cc/shop/wrk-pure/)
+- [O-rings](https://www.amazon.com/dp/B01N75JL0F)
+- [Case sound dampening](https://www.amazon.com/dp/B0084EULSK)
+
+
+Mounting
+- [Neewer Z-type head](https://www.amazon.com/dp/B07W2W7N5R)
+- [MagSafe Rings](https://www.amazon.com/dp/B08S6XQFDM)
+- [MagSafe Tripod Mount](https://www.amazon.com/dp/B0BRKPVPQR) - [Alternative](https://www.amazon.com/dp/B0CW1TCKNK)
+
+
+- [A good mounting alternative](https://www.amazon.com/dp/B0C22V8WSF) - Replaces the above 3 and actually holds position well
+
+Cables
+- [Extensions](https://www.amazon.com/gp/product/B08NTCD6VQ/) - I connect both when doing a lot of code updates to reduce disconnects from board USB-C
+- [Link Cable](https://amazon.com/gp/product/B09CTHRLFS)
+
+<img src="unicorne.jpg" alt="unicorne" width="600"/>
